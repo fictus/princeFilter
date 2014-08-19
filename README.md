@@ -1,4 +1,4 @@
-	princeFilter.JQuery.js
+    princeFilter.JQuery.js
     ======================
 
     VERSION 1.0.0
@@ -8,7 +8,7 @@ See a live Demo here:
 http://www.evicore.com/princeFilter.aspx
 
 
-    Created by evicore
+    Created by Luis Valle
     www.evicore.com/princeFilter.aspx
 
 
