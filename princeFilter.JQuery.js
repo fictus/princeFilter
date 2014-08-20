@@ -2,36 +2,49 @@
     princeFilter.JQuery.js
     ======================
 
-    VERSION 1.0.0
+    VERSION 1.0.1
 
 
     Created by Luis Valle (8/19/2014)
     www.evicore.com/princeFilter.aspx
 
 
-
+    JQuery plugin for filtering table-data. Use the following operands to filter your table-data: 'equlas', 
+    'not-equals', 'like', 'starts with', 'ends with', 'less than', 'greater than', 'true' or 'false' 
+    (for cells that contain checkboxes).
 
 
     (this plugin can be used on multiple tables at the same time)
 
-
 	USAGE
 	+++++
-	
-			Instantiating princeFilter is done in the following way:
-			
+
+		Instantiating princeFilter is done in the following way:
+
 				$('#tbl_Mytable').princeFilter();
+
 
     OPTIONAL PARAMETERS TO PASS
     +++++++++++++++++++++++++++
 
-            By default princeFilter assumes your tables contains a header Row (first row). If that is not the case
-            and your table contains no header, you must instantiate princeFilter with the following Parameter:
+        By default princeFilter assumes your tables contains a header Row (first row). If that is not the case
+        and your table contains no header, you must instantiate princeFilter with the following Parameter:
 
                 $('#tbl_Mytable').princeFilter({ containsHeader: false });
     
     
-    Just click the ⚶ 'VESTA' symbol to open princeFilter from your table...
+        Also, the princeFilter orange funnel button is set to an absolute position by default. Some
+        cases may require the button to stay at a fixed position. If you must set it to fixed
+        positioning you can do so by passing the folloiwng Parameter:
+
+                $('#tbl_Mytable').princeFilter({ buttonPosition: 'fixed' });
+
+
+
+
+
+
+    Then just click the 'FUNNEL' symbol to open princeFilter from your table...
 
 */
 
@@ -45,10 +58,11 @@ $(document).ready(function () {
 
         if ($(thisElement)[0] != null) {
             var settings = $.extend({
-                containsHeader: true
+                containsHeader: true,
+                buttonPosition: 'absolute'
             }, options);
 
-            var btnHTML = "<div id=\"dv_prncFltr_" + $(thisElement).attr("id") + "\" style=\"display:inline-block;padding:0px !important;padding-left:4px !important;padding-right:4px !important;position:absolute;margin-left:6px;margin-top:-18px;background-color:orange;color:white;font-size:14px !important;cursor:pointer;\" onmousedown=\"return false;\">⚶</div>";
+            var btnHTML = "<div id=\"dv_prncFltr_" + $(thisElement).attr("id") + "\" style=\"display:inline-block;position:" + settings.buttonPosition + ";padding:0px !important;padding:2px !important;outline:1px solid #4C9ED9;width:16px;height:16px;margin-left:6px;margin-top:-18px;background-color:orange;cursor:pointer;\" onmousedown=\"return false;\"><img src=\"data:image/png;base64," + prcn_img_filterFunnel64 + "\" alt=\"^\" /></div>";
             btnHTML = btnHTML + "<input id=\"txt_prncFltr_" + $(thisElement).attr("id") + "\" type=\"text\" value=\"\" style=\"display:none;\"></input>";
             $(thisElement).prepend(btnHTML);
 
@@ -383,3 +397,12 @@ function checkForJSONstringify() {
         }
     });
 }
+
+var prcn_img_filterFunnel64 = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAK3RFWHRDcmVhdGlvbiBUaW1lAEZyIDI4IEZlYiAyMDAzIDExOjUxOjUxICswMTAwfOn0bw"
+    + "AAAAd0SU1FB9YFFw0yEYKFUhQAAAAJcEhZcwAACvAAAArwAUKsNJgAAAAEZ0FNQQAAsY8L/GEFAAACdUlEQVR42o1SvW9ScRS9j0ehNIWAIQEpqTg4mA46yOCATYyb6dLRuLB3cfAf6NKtq38"
+    + "AIXERFhMGhYAmBuoAUWiVgqVA+CwfeYB8FZ7nvjy0X4M3ue+X994953fPuVcgxO7urmZ7e/tZLpd73uv1HoqieEev15vm8zlNp1Op3W6Xj46O0slk8iPOD51OZwDYOWOF09PTB4lEwp9KpTYYs"
+    + "La2Rg6Hg5xOJ5lMJjKbzcq5srJCICefz5fb399/lc/no8APRKvVGvb7/Ru4lVZXV8lgMCjFRqORlpaWSKvVkiAIxP/5u9vtvtXtdp9Eo9EvIGhpUHTW7/cJbZEkSTQcDrlt4m4YyAQ6nY4giRYB"
+    + "GWc4HiHNmnK5/HpnZ6e9vr5O0Eq1Wo0Gg4FSyB1ZLBalGyYNBoO0tbXVCgQC3/B7ipwLeBi8Xu/Lvb29NygS0+k0NRoNms1mNJlMFNJCoUDNZpNGo9E5/HqLb0Xg3iNTIh4zGHgCgB7sj202G8EX"
+    + "stvtiu4LsuRMJvMOHTeBCSO5i76oyhrH4/Hv0Hp/c3PzHnuC26jValGpVKJ6vU7Hx8cRjLGO2k/IAyT7IC8IZOSwWCymlpeXn3o8Hiv7wH4ASBjZYSwW+ynL8oFKUOHOGSjSv5hjElK1Ws1CzgtM"
+    + "QchmswyehEKhMCQcqq0XVAOV0NDlGKPNz5jI1OVyKTsBIyXI6eNfAnnCNRcBVwlYCs9wxCaq4/uNd0lte3Cl/hqBQlKpVMI8AfhB4/F4qN46vaH2kgd/A8Z9jUQiVszbgq37gb3Iq2PrXq0V6Obgv"
+    + "b2rrutt5C9kTB3dfxEsSEy8qTxi9fZrMv4ACcVMYmdxl5oAAAAASUVORK5CYII=";
