@@ -7,24 +7,18 @@ Live Demo:
 -------
 http://www.evicore.com/princeFilter.aspx
 
+Usage
+-----
 
-Created by Luis Valle
-www.evicore.com/princeFilter.aspx
-
-
-JQuery plugin for filtering table-data. Use the following operands to filter your table-data: 'equlas', 
-'not-equals', 'like', 'starts with', 'ends with', 'less than', 'greater than', 'true' or 'false' 
+JQuery plugin for filtering table-data. Use the following operands to filter your table-data: 'equlas', 'not-equals', 'like', 'starts with', 'ends with', 'less than', 'greater than', 'true' or 'false' 
 (for cells that contain checkboxes).
 
 
 (this plugin can be used on multiple tables at the same time)
 
-Usage
------
-
 Instantiating princeFilter is done in the following way:
 		
-		$('#tbl_Mytable').princeFilter();
+$('#tbl_Mytable').princeFilter();
 
 
 Optional Parameters
@@ -41,3 +35,11 @@ Also, the princeFilter orange funnel button is set to an absolute position by de
 
 
 Then just click the 'FUNNEL' symbol to open princeFilter from your table...
+
+License and Credit
+---
+
+Created by Luis Valle
+[www.evicore.com/princeFilter.aspx](www.evicore.com/princeFilter.aspx)
+
+Licensed under [Unlicense](http://unlicense.org/).
