@@ -1,13 +1,13 @@
 ﻿{
 "name": "princeFilter",
 "title": "princeFilter.JQuery.js",
-"description": "JQuery plugin for filtering table-data. Use the following operands to filter your table-data: 'equlas', 'not-equals', 'like', 'starts with', 'ends with', 'less than', 'greater than', 'true' or 'false' (for cells that contain checkboxes).",
+"description": "JQuery plugin for filtering table-data. Use the following operands to filter your table-data: 'equals', 'not-equals', 'like', 'starts with', 'ends with', 'less than', 'greater than', 'true' or 'false' (for cells that contain checkboxes).",
 "keywords": [
 "grid",
 "table",
 "filter"
 ],
-"version": "1.0.1",
+"version": "2.0",
 "author": {
 "name": "eviCORE",
 "url": "https://github.com/fictus/princeFilter/blob/master/AUTHOR.txt"
