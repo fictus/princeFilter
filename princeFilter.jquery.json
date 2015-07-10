@@ -16,7 +16,7 @@
 {
 "name": "Luis Valle",
 "email": "luis.e.valle@gmail.com",
-"url": "http://www.evicore.com"
+"url": "http://www.evicore.net"
 }
 ],
 "licenses": [
@@ -26,9 +26,9 @@
 }
 ],
 "bugs": "https://github.com/fictus/princeFilter/issues",
-"homepage": "http://www.evicore.com/princeFilter.aspx",
+"homepage": "http://www.evicore.net/princeFilter.aspx",
 "docs": "https://github.com/fictus/princeFilter/blob/master/README.md",
-"demo": "http://www.evicore.com/princeFilter.aspx",
+"demo": "http://www.evicore.net/princeFilter.aspx",
 "download": "https://github.com/fictus/princeFilter",
 "dependencies": {
 "jquery": "1.7.2"
