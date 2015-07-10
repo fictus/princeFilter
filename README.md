@@ -5,7 +5,7 @@ VERSION 2.0
     
 Live Demo:
 -------
-http://www.evicore.com/princeFilter.aspx
+http://www.evicore.net/princeFilter.aspx
 
 Usage
 -----
