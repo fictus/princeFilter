@@ -25,7 +25,7 @@ JQuery plugin for filtering table-data. Use the following operands to filter you
 	        Instantiate princeFilter this way:
 	                $('#tbl_MytableID').princeFilter();
                         
-(SQL MODE)
+(SQL MODE - filter data from SQL databases)
 SQL mode only offers two operands:
 	• 'equals' (use the % wildcard to get LIKE matches)
 	• 'between' (for filtering numeric cells within a low & high numeric range)
